@@ -13,7 +13,7 @@
 //     #region EVENT
 //     // EVENT
 //     FMOD.Studio.EventInstance FootstepsSound; // Deklaracja zmiennej, która będzie przechowywać instancję eventu Footsteps.
-//     public EventReference footstepsEvent; // Deklaracja publicznego pola, które przechowuje referencję do pliku z eventem Footsteps.
+//     public EventReference footstepsEvent; // Deklaracja publicznego pola, które przechowuje referencję do eventu Footsteps.
 
 //     private void Footsteps()
 //     {
@@ -42,7 +42,7 @@
 //     #region SNAPSHOT
 //     // SNAPSHOT
 //     FMOD.Studio.EventInstance HealthSnap; // Deklaracja zmiennej, która będzie przechowywać instancję snapshotu Health.
-//     public EventReference healthSnapshot; // Deklaracja publicznego pola, które przechowuje referencję do pliku z snapshotem Health.
+//     public EventReference healthSnapshot; // Deklaracja publicznego pola, które przechowuje referencję snapshot Health.
 
 //     private void StartSnapshot()
 //     {
@@ -86,7 +86,12 @@
 //     private void MusicSwitch()
 //     {
 //         // EVENT
-//         FootstepsSound = FMODUnity.RuntimeManager.CreateInstance(footstepsEvent); // Tworzy nową instancję eventu Footsteps.
+//         FMOD.Studio.EventInstance Music; // Deklaracja zmiennej, która będzie przechowywać instancję eventu Footsteps.
+//         private EventReference musicEvent = "events:/nazwa_eventu"; // Deklaracja publicznego pola, które przechowuje referencję do pliku z eventem Footsteps.
+        
+//         [SerializeField] EventReference musicEvent; // Deklaracja serializowanego pola, które przechowuje referencję do eventu FMOD.
+
+//         Music = FMODUnity.RuntimeManager.CreateInstance(footstepsEvent); // Tworzy nową instancję eventu Footsteps.
 //         Music.setParameterByNameWithLabel("Switch_parts", "Part 2"); // Ustawia parametr o nazwie "Switch_parts" na wartość "Part 2".
 //         Music.start(); // Uruchamia odtwarzanie eventu.
 //         Music.stop(FMOD.Studio.STOP_MODE.IMMEDIATE); // Stopuje odtwarzanie eventu bez fadeoutu.
@@ -94,6 +99,8 @@
 //         Music.release(); // Zwolnia pamięć zajmowaną przez instancję eventu.
 
 //         // EMITTER
+//         [SerializeField] FMODUnity.StudioEventEmitter tavernEmitter; // Deklaracja publicznego pola, które przechowuje referencję do event emittera na scenie.
+
 //         tavernEmitter_Music.SetParameter("Switch_parts", 0); // Ustawia parametr o nazwie "Switch_parts" na wartość 0 dla event emittera.
 //         tavernEmitter_Music.Play(); // Uruchamia odtwarzanie na emitterze.
 //         tavernEmitter_Music.Stop(); // Stopuje odtwarzanie na emitterze.
