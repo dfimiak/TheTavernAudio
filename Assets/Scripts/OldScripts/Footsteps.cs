@@ -63,54 +63,37 @@ public class Footsteps : MonoBehaviour
 
         if (Physics.Raycast(transform.position, Vector3.down, out hit, distToGround + 0.5f))
         {
+            FootstepsSound = FMODUnity.RuntimeManager.CreateInstance(footstepsEvent);
+            FootstepsSound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform)); //to naprawia losowe bugi z dzwiekiem
+
             if (hit.collider.CompareTag("Stone"))
             {
-                FootstepsSound = FMODUnity.RuntimeManager.CreateInstance(footstepsEvent);
-                FootstepsSound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
-                FootstepsSound.setParameterByNameWithLabel("Footsteps_surface", "Stone");
-                FootstepsSound.start();
-                FootstepsSound.release();
+                FootstepsSound.setParameterByNameWithLabel("Foot_switcher", "stone_label");
             }
             else if (hit.collider.CompareTag("Wood"))
             {
-                FootstepsSound = FMODUnity.RuntimeManager.CreateInstance(footstepsEvent);
-                FootstepsSound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
-                FootstepsSound.setParameterByNameWithLabel("Footsteps_surface", "Wood");
-                FootstepsSound.start();
-                FootstepsSound.release();
+                FootstepsSound.setParameterByNameWithLabel("Foot_switcher", "wood_label");
             }
             else if (hit.collider.CompareTag("Outside"))
             {
-                FootstepsSound = FMODUnity.RuntimeManager.CreateInstance(footstepsEvent);
-                FootstepsSound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
-                FootstepsSound.setParameterByNameWithLabel("Footsteps_surface", "Stone");
-                FootstepsSound.start();
-                FootstepsSound.release();
+                FootstepsSound.setParameterByNameWithLabel("Foot_switcher", "stone_label");
+                
             }
             else if (hit.collider.CompareTag("Inside_stone"))
             {
-                FootstepsSound = FMODUnity.RuntimeManager.CreateInstance(footstepsEvent);
-                FootstepsSound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
-                FootstepsSound.setParameterByNameWithLabel("Footsteps_surface", "Stone");
-                FootstepsSound.start();
-                FootstepsSound.release();
+                FootstepsSound.setParameterByNameWithLabel("Foot_switcher", "stone_label");
             }
             else if (hit.collider.CompareTag("Inside_wood"))
             {
-                FootstepsSound = FMODUnity.RuntimeManager.CreateInstance(footstepsEvent);
-                FootstepsSound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
-                FootstepsSound.setParameterByNameWithLabel("Footsteps_surface", "Wood");
-                FootstepsSound.start();
-                FootstepsSound.release();
+                FootstepsSound.setParameterByNameWithLabel("Foot_switcher", "wood_label");
             }
             else
             {
-                FootstepsSound = FMODUnity.RuntimeManager.CreateInstance(footstepsEvent);
-                FootstepsSound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
-                FootstepsSound.setParameterByNameWithLabel("Footsteps_surface", "Stone");
-                FootstepsSound.start();
-                FootstepsSound.release();
+                FootstepsSound.setParameterByNameWithLabel("Foot_switcher", "stone_label");
             }
+
+            FootstepsSound.start();
+            FootstepsSound.release();
         }       
     }
 

@@ -30,7 +30,7 @@ public class FPSController : MonoBehaviour
         Cursor.visible = false;
     }
 
-    void Update()
+    void LateUpdate()
     {
 
         #region Handles Movement
