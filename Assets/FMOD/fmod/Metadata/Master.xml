@@ -4,6 +4,9 @@
 		<property name="name">
 			<value>Master Bus</value>
 		</property>
+		<relationship name="masters">
+			<destination>{5c7afadb-a14b-42e4-b808-aeec6e7667b3}</destination>
+		</relationship>
 		<relationship name="effectChain">
 			<destination>{e59ed341-346e-4fb0-a7e9-5ad4fb5a821b}</destination>
 		</relationship>
@@ -16,12 +19,18 @@
 	</object>
 	<object class="MixerBusEffectChain" id="{e59ed341-346e-4fb0-a7e9-5ad4fb5a821b}">
 		<relationship name="effects">
+			<destination>{fa992bbc-3b10-4b1f-ae2a-c6a704add936}</destination>
 			<destination>{9557f754-5a1e-4f3a-8da3-b7d2542566fe}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{d8e7e2d1-a80b-437f-b026-67c9faf96f95}">
 		<property name="overridingOutputFormat">
 			<value>2</value>
+		</property>
+	</object>
+	<object class="MultibandEqEffect" id="{fa992bbc-3b10-4b1f-ae2a-c6a704add936}">
+		<property name="frequencyA">
+			<value>22000</value>
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{9557f754-5a1e-4f3a-8da3-b7d2542566fe}" />

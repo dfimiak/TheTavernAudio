@@ -86,10 +86,10 @@
 			<value>value</value>
 		</property>
 		<property name="peakValue">
-			<value>-19.5</value>
+			<value>-11</value>
 		</property>
 		<property name="sustainValue">
-			<value>-19.5</value>
+			<value>-11</value>
 		</property>
 	</object>
 </objects>

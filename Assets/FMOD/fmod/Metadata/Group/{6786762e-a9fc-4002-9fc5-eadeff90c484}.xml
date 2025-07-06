@@ -23,6 +23,9 @@
 	<object class="MixerBusPanner" id="{cd885b6e-6ec0-44f2-ac98-c89453a14690}" />
 	<object class="MixerBusFader" id="{36af21dc-792a-4e07-9f5c-6378ecb3df0f}" />
 	<object class="MixerSend" id="{3feb2254-ceea-415d-a35d-269f22a44ec5}">
+		<property name="level">
+			<value>-20</value>
+		</property>
 		<property name="inputFormat">
 			<value>1</value>
 		</property>

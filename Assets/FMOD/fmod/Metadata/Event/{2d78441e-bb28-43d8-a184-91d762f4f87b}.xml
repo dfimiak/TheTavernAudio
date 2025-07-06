@@ -46,6 +46,9 @@
 		</relationship>
 	</object>
 	<object class="MixerInput" id="{2b70c4ec-30ac-45cb-bc39-fad3ced3de0b}">
+		<relationship name="masters">
+			<destination>{5648f4f6-2313-4e05-a541-2b95840f7255}</destination>
+		</relationship>
 		<relationship name="effectChain">
 			<destination>{6e4f87a0-62c6-437c-bfc6-9cd8feab96fb}</destination>
 		</relationship>
@@ -53,7 +56,7 @@
 			<destination>{a7e63c58-7a23-41e4-af2e-166a74f44c1d}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{94003b3e-7257-44eb-9952-ef4e068cc1fd}</destination>
+			<destination>{df740ed8-2486-4af2-853d-c8d72484aea9}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{3a1b1ebd-63d3-4f5d-9ee2-d4bcab752e7c}" />
@@ -103,6 +106,9 @@
 		</property>
 		<property name="startOffset">
 			<value>50</value>
+		</property>
+		<property name="volume">
+			<value>-3</value>
 		</property>
 		<property name="looping">
 			<value>true</value>

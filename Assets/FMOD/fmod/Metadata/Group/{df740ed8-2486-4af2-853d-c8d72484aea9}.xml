@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="MixerGroup" id="{df740ed8-2486-4af2-853d-c8d72484aea9}">
+		<property name="name">
+			<value>Rvn Snap</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{a8f77ead-f40b-4315-96a7-a53ca4498881}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{e73c8de3-7ae9-4291-9e20-1aac213693e9}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{94003b3e-7257-44eb-9952-ef4e068cc1fd}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{a8f77ead-f40b-4315-96a7-a53ca4498881}">
+		<relationship name="effects">
+			<destination>{f7e61e47-072e-4db6-a03c-50220f7f213f}</destination>
+			<destination>{0809e74c-f423-4814-93a3-4387f280e95e}</destination>
+			<destination>{73084b76-b887-45f3-968d-b11faaa50732}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{e73c8de3-7ae9-4291-9e20-1aac213693e9}" />
+	<object class="SFXReverbEffect" id="{f7e61e47-072e-4db6-a03c-50220f7f213f}">
+		<property name="wetLevel">
+			<value>-5</value>
+		</property>
+	</object>
+	<object class="MultibandEqEffect" id="{0809e74c-f423-4814-93a3-4387f280e95e}">
+		<property name="frequencyA">
+			<value>22000</value>
+		</property>
+	</object>
+	<object class="MixerBusFader" id="{73084b76-b887-45f3-968d-b11faaa50732}" />
+</objects>

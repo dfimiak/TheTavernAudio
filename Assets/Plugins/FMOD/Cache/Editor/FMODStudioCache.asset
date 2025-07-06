@@ -1,5 +1,29 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7529822661005231984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/fire_loop/Fire
+  m_EditorClassIdentifier: 
+  Name: Fire
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1772729302
+    data2: 2776514749
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-7486730665507994726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,6 +157,32 @@ MonoBehaviour:
   - stone_label
   - wood_label
   Exists: 1
+--- !u!114 &-3674164738651514885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/land/foot_switcher
+  m_EditorClassIdentifier: 
+  Name: foot_switcher
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3454387193
+    data2: 899720920
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - stone_label
+  - wood_label
+  Exists: 1
 --- !u!114 &-2484142875579968128
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,7 +210,7 @@ MonoBehaviour:
   - {fileID: -5763105317078786927}
   MinDistance: 1
   MaxDistance: 20
-  Length: 1275
+  Length: 1295
 --- !u!114 &-2035429927014602208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -184,10 +234,37 @@ MonoBehaviour:
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
-  Parameters: []
+  Parameters:
+  - {fileID: -7529822661005231984}
   MinDistance: 1
   MaxDistance: 20
   Length: 80000
+--- !u!114 &-1662886336373906682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/jump/foot_switcher
+  m_EditorClassIdentifier: 
+  Name: foot_switcher
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3454387193
+    data2: 899720920
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - stone_label
+  - wood_label
+  Exists: 1
 --- !u!114 &-266215008424164090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240,12 +317,15 @@ MonoBehaviour:
   - {fileID: 1478733018161476186}
   - {fileID: -2484142875579968128}
   - {fileID: -4918965242912097045}
+  - {fileID: 7323971071391357173}
+  - {fileID: 5999002468488376767}
+  - {fileID: 6645673384975618037}
   EditorParameters: []
   MasterBanks:
   - {fileID: 7445736980093118566}
   StringsBanks:
   - {fileID: 3399063522324334673}
-  cacheTime: 638873156553887992
+  cacheTime: 638873960583028530
   cacheVersion: 131617
 --- !u!114 &1478733018161476186
 MonoBehaviour:
@@ -289,11 +369,94 @@ MonoBehaviour:
   Path: Assets/FMOD/fmod/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638873156553887992
+  lastModified: 638873960583028530
   FileSizes:
   - Name: Desktop
-    Value: 1308
+    Value: 1692
   Exists: 1
+--- !u!114 &5999002468488376767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/jump
+  m_EditorClassIdentifier: 
+  Path: event:/jump
+  Guid:
+    Data1: 1909636861
+    Data2: 1200826967
+    Data3: -1355735368
+    Data4: 1621858799
+  Banks:
+  - {fileID: 7445736980093118566}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -1662886336373906682}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 391
+--- !u!114 &6645673384975618037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/land
+  m_EditorClassIdentifier: 
+  Path: event:/land
+  Guid:
+    Data1: -1897259638
+    Data2: 1189126252
+    Data3: 1829327232
+    Data4: -273026048
+  Banks:
+  - {fileID: 7445736980093118566}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -3674164738651514885}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 781
+--- !u!114 &7323971071391357173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: snapshot:/Health
+  m_EditorClassIdentifier: 
+  Path: snapshot:/Health
+  Guid:
+    Data1: 1536630038
+    Data2: 1276525681
+    Data3: 216676501
+    Data4: 1082314830
+  Banks:
+  - {fileID: 7445736980093118566}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &7445736980093118566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -309,10 +472,10 @@ MonoBehaviour:
   Path: Assets/FMOD/fmod/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638873156553872962
+  lastModified: 638873960583012564
   FileSizes:
   - Name: Desktop
-    Value: 6137920
+    Value: 6172000
   Exists: 1
 --- !u!114 &8795542307003350045
 MonoBehaviour:

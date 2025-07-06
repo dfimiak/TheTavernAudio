@@ -21,6 +21,8 @@ public class Doors : MonoBehaviour, IInteractable
     FMOD.Studio.EventInstance InsideRoom;
     public EventReference insideRoomSnap;
 
+    public RoomAmbient roomAmbient;
+
     ////////////////// FMOD Section End ///////////////////
 
     public void Interact()
@@ -89,8 +91,6 @@ public class Doors : MonoBehaviour, IInteractable
 
     void RoomsSnap()
     {
-        RoomAmbient roomAmbient = FindObjectOfType<RoomAmbient>();
-
         if (roomAmbient.ambientActivated == true && doorsOpened == false)
         {
             Debug.Log("im in!");
